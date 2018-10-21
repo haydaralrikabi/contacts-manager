@@ -1,0 +1,33 @@
+div#container.margin-left
+  form#new-contact(
+      name="new-contact" 
+      action="/api/contacts/new" 
+      method="post" 
+      enctype="multipart/form-data" 
+      autocomplete="off" 
+      onsubmit="newContact(); return false;"
+  )
+
+    .form-row.mr-4
+      .form-group.col-md-3.mr-2
+        label(for="first_name") First Name:
+        input#first_name.form-control(type="text" name="first_name" autofocus)
+
+      .form-group.col-md-3
+        label(for="last_name") Last Name:
+        input#last_name.form-control(type="text" name="last_name")
+      
+    .form-row.mr-4
+      .form-group.col-md-3
+        label(for="phone") Phone No.
+        input#phone.form-control(type="text" name="phone")
+      
+    .form-row.mr-4
+      .form-group.col-md-6
+        label(for="address") Address:
+        input#address.form-control(type="text" name="address")
+      
+    .form-row
+      .form-group.col-md-6
+      button.btn.btn-primary(type="submit") Submit
+
