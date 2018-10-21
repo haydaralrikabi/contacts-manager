@@ -1,0 +1,14 @@
+<div id="container" class="margin-left">
+  <form name="contact" id="contact" action="/api/contacts/{{contact._id}}" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="updateContact(); return false;">
+
+    <app-contact-form></app-contact-form>
+      
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <button type="submit" class="btn btn-success mr-3">Update</button>
+        <button type="button" onclick="deleteContact();" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+
+  </form>
+</div>
